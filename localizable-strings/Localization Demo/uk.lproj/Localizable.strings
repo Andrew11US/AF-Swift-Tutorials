@@ -1,0 +1,8 @@
+/* 
+  Localizable.strings
+  Localization Demo
+
+  Created by Andrew on 11/16/20.
+  
+*/
+"HomeString_buttonTitle" = "Локалізований напис";
