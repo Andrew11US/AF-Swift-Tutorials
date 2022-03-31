@@ -5,7 +5,7 @@ AF Swift Tutorials channel code samples
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://yt3.ggpht.com/8aGSRbKfmMnRKQRaqK6EA64Tkc3tIlvbwvlF8RjXI8XLC_wNU6LIxlpVD7jhdlZvB2WU_lSWZQ=s176-c-k-c0x00ffffff-no-rj" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">project_title</h3>
@@ -27,6 +27,6 @@ AF Swift Tutorials channel code samples
 <!-- CONTACT -->
 ## Channel link
 
-AF Swift Tutorial: [YouTube](https://www.youtube.com/channel/UC0mdtLmwOixyY0wEUn_7Kcw/about)
+AF Swift Tutorial: [YouTube](https://www.youtube.com/channel/UC0mdtLmwOixyY0wEUn_7Kcw)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
