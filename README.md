@@ -1,5 +1,7 @@
-# AF Swift Tutorials
+<!-- # AF Swift Tutorials
 AF Swift Tutorials channel code samples
+
+[AF Swift Tutorials on YouTube](https://www.youtube.com/channel/UC0mdtLmwOixyY0wEUn_7Kcw/about) -->
 
 <!-- PROJECT LOGO -->
 <br />
