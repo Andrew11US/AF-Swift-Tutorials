@@ -10,7 +10,7 @@ Code snippets and samples used in video tutorials.
 </div>
 
 <div align="center">
-    <img src="https://andrew11us.github.io/images/af-swift-tutorials-cover.jpg" alt="Logo" width="557">
+    <img src="https://andrew11us.github.io/images/af-swift-tutorials-cover.jpg" alt="Logo">
 </div>
 
 
