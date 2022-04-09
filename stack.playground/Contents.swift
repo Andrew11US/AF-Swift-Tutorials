@@ -37,7 +37,7 @@ extension Stack: CustomStringConvertible {
     }
 }
 
-var stack = Stack<String>()
+var stack: Stack = Stack<String>()
 stack.push(item: "One")
 stack.push(item: "Two")
 stack.push(item: "Three")
