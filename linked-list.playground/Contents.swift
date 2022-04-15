@@ -103,9 +103,7 @@ extension LinkedList: CustomStringConvertible {
             currentNode = currentNode?.next
         }
         
-        let output = elements
-            .joined(separator: " -> ")
-        
+        let output = elements.joined(separator: " -> ")
         return start + output
     }
     
