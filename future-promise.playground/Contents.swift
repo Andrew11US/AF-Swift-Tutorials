@@ -46,13 +46,3 @@ future3.sink { completion in
 } receiveValue: { value in
     print(value)
 }.store(in: &cancellables)
-
-//let task = URLSession.shared.dataTask(with: URL(string: "https://jsonplaceholder.typicode.com/todos/1")!) { data, resoponse, error in
-//    guard error == nil else { return }
-//    guard let data = data else {
-//        return
-//    }
-//
-//    print(String(data: data, encoding: .utf8) ?? "")
-//}
-//task.resume()
