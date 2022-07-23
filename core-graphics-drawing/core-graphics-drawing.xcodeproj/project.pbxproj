@@ -60,14 +60,14 @@
 		01594134288B723A000723B2 /* core-graphics-drawing */ = {
 			isa = PBXGroup;
 			children = (
-				01594135288B723A000723B2 /* AppDelegate.swift */,
-				01594137288B723A000723B2 /* SceneDelegate.swift */,
-				01594139288B723A000723B2 /* ViewController.swift */,
-				01594149288B73DC000723B2 /* CanvasView.swift */,
-				0159414B288B73E6000723B2 /* Line.swift */,
-				0159413B288B723A000723B2 /* Main.storyboard */,
-				0159413E288B723C000723B2 /* Assets.xcassets */,
 				01594140288B723D000723B2 /* LaunchScreen.storyboard */,
+				0159413B288B723A000723B2 /* Main.storyboard */,
+				0159414B288B73E6000723B2 /* Line.swift */,
+				01594149288B73DC000723B2 /* CanvasView.swift */,
+				01594139288B723A000723B2 /* ViewController.swift */,
+				01594137288B723A000723B2 /* SceneDelegate.swift */,
+				01594135288B723A000723B2 /* AppDelegate.swift */,
+				0159413E288B723C000723B2 /* Assets.xcassets */,
 				01594143288B723D000723B2 /* Info.plist */,
 			);
 			path = "core-graphics-drawing";
