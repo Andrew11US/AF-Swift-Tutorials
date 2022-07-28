@@ -10,7 +10,7 @@ import UIKit
 class CanvasView: UIView {
     private var lines: [Line] = []
     private var strokeWidth: CGFloat = 8.0
-    var strokeColor: UIColor = .black
+    private var strokeColor: UIColor = .black
     
     // MARK: - Drawing methods
     override func draw(_ rect: CGRect) {
