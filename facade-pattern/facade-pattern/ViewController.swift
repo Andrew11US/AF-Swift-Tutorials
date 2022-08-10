@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         Task {
             let imageLoader = ImageLoader()
             let image = await imageLoader.downloadImage(url: imageURLString)
-            self.imageView.image = image
+            imageView.image = image
         }
     }
 }
