@@ -11,7 +11,6 @@
 		01F9E5302A76009E0000500A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9E52F2A76009E0000500A /* ContentView.swift */; };
 		01F9E5322A76009E0000500A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9E5312A76009E0000500A /* Assets.xcassets */; };
 		01F9E5352A76009E0000500A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01F9E5342A76009E0000500A /* Preview Assets.xcassets */; };
-		01F9E53D2A76017F0000500A /* IncrementBuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F9E53C2A76017F0000500A /* IncrementBuildNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +19,8 @@
 		01F9E52F2A76009E0000500A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		01F9E5312A76009E0000500A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01F9E5342A76009E0000500A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		01F9E53C2A76017F0000500A /* IncrementBuildNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncrementBuildNumber.swift; sourceTree = "<group>"; };
+		01F9E56A2A76E8F10000500A /* HelloXcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloXcode.swift; sourceTree = "<group>"; };
+		01F9E56D2A76ED1E0000500A /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +37,7 @@
 		01F9E5212A76009E0000500A = {
 			isa = PBXGroup;
 			children = (
+				01F9E53B2A7601660000500A /* Scripts */,
 				01F9E52C2A76009E0000500A /* script-tutorial */,
 				01F9E52B2A76009E0000500A /* Products */,
 			);
@@ -53,7 +54,6 @@
 		01F9E52C2A76009E0000500A /* script-tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				01F9E53B2A7601660000500A /* Scripts */,
 				01F9E52D2A76009E0000500A /* script_tutorialApp.swift */,
 				01F9E52F2A76009E0000500A /* ContentView.swift */,
 				01F9E5312A76009E0000500A /* Assets.xcassets */,
@@ -73,7 +73,8 @@
 		01F9E53B2A7601660000500A /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
-				01F9E53C2A76017F0000500A /* IncrementBuildNumber.swift */,
+				01F9E56A2A76E8F10000500A /* HelloXcode.swift */,
+				01F9E56D2A76ED1E0000500A /* Logger.swift */,
 			);
 			path = Scripts;
 			sourceTree = "<group>";
@@ -85,10 +86,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 01F9E5382A76009E0000500A /* Build configuration list for PBXNativeTarget "script-tutorial" */;
 			buildPhases = (
-				01F9E53E2A7603380000500A /* Increment Build Number */,
 				01F9E5262A76009E0000500A /* Sources */,
 				01F9E5272A76009E0000500A /* Frameworks */,
 				01F9E5282A76009E0000500A /* Resources */,
+				01F9E56B2A76E9BB0000500A /* Hello Xcode Script */,
+				01F9E56E2A76EDB90000500A /* Logger Script */,
 			);
 			buildRules = (
 			);
@@ -145,24 +147,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01F9E53E2A7603380000500A /* Increment Build Number */ = {
+		01F9E56B2A76E9BB0000500A /* Hello Xcode Script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/IncrementBuildNumber.swift",
 			);
-			name = "Increment Build Number";
+			name = "Hello Xcode Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "xcrun --sdk macosx swiftc -parse-as-library Scripts/HelloXcode.swift -o HelloXcodeScript\n./HelloXcodeScript\n";
+		};
+		01F9E56E2A76EDB90000500A /* Logger Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Scripts/Logger.swift",
+			);
+			name = "Logger Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcrun --sdk macosx swiftc -parse-as-library $SCRIPT_INPUT_FILE_0 -o LoggerScript\n./LoggerScript\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -172,7 +194,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				01F9E5302A76009E0000500A /* ContentView.swift in Sources */,
-				01F9E53D2A76017F0000500A /* IncrementBuildNumber.swift in Sources */,
 				01F9E52E2A76009E0000500A /* script_tutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"script-tutorial/Preview Content\"";
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				ENABLE_PREVIEWS = YES;
@@ -329,7 +350,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"script-tutorial/Preview Content\"";
 				DEVELOPMENT_TEAM = PTRW36GG78;
 				ENABLE_PREVIEWS = YES;
