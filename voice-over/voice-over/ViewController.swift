@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         longPressLabel.accessibilityCustomActions = [changeColorAction]
         
         // Accessibility hint
-        focusButton.accessibilityHint = "Double tap to move focus onto mountain image"
+        focusButton.accessibilityHint = "Double tao to move focus onto the mountain image"
     }
 }
 
