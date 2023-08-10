@@ -43,10 +43,12 @@ class ViewController: UIViewController {
         sender.tintColor = isUnselected ? .systemRed : .systemBlue
         let isSelected = sender.tintColor == .systemRed
         print("Button \(sender.titleLabel?.text ?? "") is selected \(isSelected)")
+        // Convey selected state
         sender.accessibilityValue = isSelected ? "Selected" : nil
     }
     
     @IBAction func moveFocusOnTap(_ sender: UIButton) {
+        // Move focus
         UIAccessibility.post(notification: .layoutChanged, argument: imageView)
     }
     
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func makeAnnouncement(_ sender: UIButton) {
+        // Announcement
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             UIAccessibility.post(notification: .announcement, argument: "This is a test announcement")
         }
@@ -68,7 +71,7 @@ class ViewController: UIViewController {
         let headers = [header1, header2, header3, header4, header5]
         headers.forEach { $0?.accessibilityTraits = .header }
         
-        // Enable accessibility
+        // Enable image accessibility
         imageView.isAccessibilityElement = true
         imageView.accessibilityTraits = .image
         imageView.accessibilityLabel = "Picture of a mountain"
