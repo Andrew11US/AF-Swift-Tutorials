@@ -2,11 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>dictionary-items</key>
+	<dict>
+		<key>X1</key>
+		<string>Monterey</string>
+	</dict>
+	<key>array-items</key>
+	<array>
+		<string>Mavericks</string>
+	</array>
 	<key>number</key>
-	<integer>927</integer>
+	<integer>987</integer>
 	<key>text</key>
 	<string>Hello property list</string>
-	<key>boolean</key>
-	<true/>
 </dict>
 </plist>
