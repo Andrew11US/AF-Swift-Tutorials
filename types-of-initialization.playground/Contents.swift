@@ -6,8 +6,10 @@ import UIKit
 
 // Default Initializers
 class Default {
-    init() { }
+    var num: Int = 0
 }
+
+let d = Default().num
 
 // Memberwise Initializers
 struct Point {
