@@ -1,4 +1,8 @@
 import UIKit
+/*:
+  * Note:
+ Pattern matching in Swift is a language feature that allows you to match the values of variables or expressions against specific patterns.
+ */
 
 // Wildcard pattern
 for _ in 1...3 {
