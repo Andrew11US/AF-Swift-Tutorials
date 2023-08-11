@@ -5,9 +5,11 @@ for _ in 1...3 {
     print("Hello playground")
 }
 
+
 // Identifier pattern
 let name = "Tony Stark"
 /// let _ = saveData()
+
 
 // Value-binding pattern
 let coordinate = (5, -3)
@@ -19,11 +21,14 @@ default:
     print("unknown")
 }
 
+
 // Tuple pattern
 let coordinates = [(1, 1), (2, 2), (5, 5), (7, 5), (9, 2), (3, 5)]
+
 for (x, y) in coordinates where y > 5 {
   // Only iterate over the values that have a 5 in the `y` position.
 }
+
 
 // Enumeration Case Pattern
 enum MyEnum {
@@ -42,6 +47,7 @@ case .caseB(let string):
 case .caseC:
     print("Value is caseC")
 }
+
 
 // Optional Pattern
 let possibleInt: Int? = 97
@@ -83,6 +89,7 @@ func makeVehicle() -> Vehicle {
 }
 
 let aVehicle = makeVehicle()
+
 switch aVehicle {
 case is Car:
     print("The vehicle is a car")
