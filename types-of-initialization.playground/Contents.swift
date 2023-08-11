@@ -34,7 +34,7 @@ let person = Person(name: "Tim", age: 30)
 class Vehicle {
     var wheels: Int
 
-    init(wheels: Int) {
+    required init(wheels: Int) {
         self.wheels = wheels
     }
 }
@@ -53,6 +53,7 @@ class Car: Vehicle {
     }
 }
 
+let car = Car(wheels: 4)
 
 // Failable Initializers
 struct Temperature {
@@ -86,3 +87,16 @@ class Rectangle {
 }
 
 let rect = Rectangle(side: 10.0)
+
+// Lazy initialization
+class Animal {
+    var legs: Int
+    var wings: Int?
+    
+    init(legs: Int) {
+        self.legs = legs
+    }
+}
+
+let spider = Animal(legs: 6)
+spider.wings = 0
