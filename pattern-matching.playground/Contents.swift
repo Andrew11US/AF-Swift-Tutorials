@@ -12,7 +12,7 @@ for _ in 1...3 {
 
 // Identifier pattern
 let name = "Tony Stark"
-/// let _ = saveData()
+let _ = saveData()
 
 
 // Value-binding pattern
