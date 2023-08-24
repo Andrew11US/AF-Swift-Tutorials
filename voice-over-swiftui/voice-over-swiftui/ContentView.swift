@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var customLabelColor: Color = .orange
     let items = [1, 2, 3, 6, 5, 4, 7, 8, 9]
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
+    @AccessibilityFocusState private var isFocusedImage
     
     var body: some View {
         VStack(spacing: 30) {
@@ -21,6 +22,7 @@ struct ContentView: View {
                         .font(.system(size: 24))
                         .bold()
                         .padding(.leading, 20)
+                        .accessibilityAddTraits(.isHeader)
                     Spacer()
                 }
                 LazyVGrid(columns: columns, spacing: 10) {
@@ -34,24 +36,29 @@ struct ContentView: View {
                                     colors[item-1] = colors[item-1] == .blue ? .red : .blue
                                 }
                                 .accessibilityValue(colors[item-1] == .red ? "Selected" : "")
+//                                .accessibilitySortPriority(Double(item))
                             Text(String(item))
                                 .foregroundColor(.white)
                                 .font(.system(size: 24))
                         }
+                        .accessibilityElement(children: .combine)
+                        .accessibilityAddTraits(.isButton)
+                        .accessibilitySortPriority(Double(items.count - item - 1))
                     }
                 }
             }
             
             VStack {
                 HStack {
-                    Text("Switch focus")
+                    Text("Focus move")
                         .font(.system(size: 24))
                         .bold()
                         .padding(.leading, 20)
+                        .accessibilityAddTraits(.isHeader)
                     Spacer()
                 }
                 Button("Switch focus") {
-                    // Add action here
+                    isFocusedImage.toggle()
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
@@ -59,6 +66,7 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding([.leading, .trailing], 20)
+                .accessibilityHint("Double tap to move focus onto an image")
             }
             
             VStack {
@@ -67,9 +75,10 @@ struct ContentView: View {
                         .font(.system(size: 24))
                         .bold()
                         .padding(.leading, 20)
+                        .accessibilityAddTraits(.isHeader)
                     Spacer()
                 }
-                Text("Switch focus")
+                Text("Change Color")
                 .frame(maxWidth: .infinity)
                 .padding()
                 .background(customLabelColor)
@@ -77,6 +86,9 @@ struct ContentView: View {
                 .cornerRadius(10)
                 .padding([.leading, .trailing], 20)
                 .onTapGesture(count: 2) {
+                    customLabelColor = customLabelColor == .orange ? .red : .orange
+                }
+                .accessibilityAction {
                     customLabelColor = customLabelColor == .orange ? .red : .orange
                 }
             }
@@ -87,10 +99,13 @@ struct ContentView: View {
                         .font(.system(size: 24))
                         .bold()
                         .padding(.leading, 20)
+                        .accessibilityAddTraits(.isHeader)
                     Spacer()
                 }
                 Button("Make announcement") {
-                    // Add action here
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                        UIAccessibility.post(notification: .announcement, argument: "This is a Voice Over announcement")
+                    }
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
@@ -106,6 +121,7 @@ struct ContentView: View {
                         .font(.system(size: 24))
                         .bold()
                         .padding(.leading, 20)
+                        .accessibilityAddTraits(.isHeader)
                     Spacer()
                 }
                 Image("mountain")
@@ -114,6 +130,8 @@ struct ContentView: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)
                     .padding([.leading, .trailing], 20)
+                    .accessibilityLabel("Picture of a mountain")
+                    .accessibilityFocused($isFocusedImage)
             }
         }
     }
