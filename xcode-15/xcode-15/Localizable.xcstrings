@@ -1,0 +1,15 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Debug mode" : {
+
+    },
+    "Hello Xcode!" : {
+
+    },
+    "UIViewController rendered using preview" : {
+
+    }
+  },
+  "version" : "1.0"
+}
