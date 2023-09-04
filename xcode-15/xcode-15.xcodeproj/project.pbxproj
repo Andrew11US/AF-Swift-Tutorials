@@ -15,7 +15,7 @@
 		011629552AA5505700F0E92F /* AssetCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011629542AA5505700F0E92F /* AssetCatalogView.swift */; };
 		011629572AA550F500F0E92F /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011629562AA550F500F0E92F /* Documentation.swift */; };
 		011629592AA5566300F0E92F /* LocalizedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011629582AA5566300F0E92F /* LocalizedView.swift */; };
-		0116295B2AA558EF00F0E92F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0116295A2AA558EF00F0E92F /* Localizable.xcstrings */; };
+		0116295D2AA5627700F0E92F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0116295C2AA5627700F0E92F /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		011629542AA5505700F0E92F /* AssetCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCatalogView.swift; sourceTree = "<group>"; };
 		011629562AA550F500F0E92F /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
 		011629582AA5566300F0E92F /* LocalizedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedView.swift; sourceTree = "<group>"; };
-		0116295A2AA558EF00F0E92F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0116295C2AA5627700F0E92F /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				011629542AA5505700F0E92F /* AssetCatalogView.swift */,
 				011629522AA54DA500F0E92F /* RenderedVC.swift */,
 				011629562AA550F500F0E92F /* Documentation.swift */,
-				0116295A2AA558EF00F0E92F /* Localizable.xcstrings */,
+				0116295C2AA5627700F0E92F /* Localizable.xcstrings */,
 				011629482AA548EB00F0E92F /* Assets.xcassets */,
 				0116294A2AA548EB00F0E92F /* Preview Content */,
 			);
@@ -143,7 +143,7 @@
 			files = (
 				0116294C2AA548EB00F0E92F /* Preview Assets.xcassets in Resources */,
 				011629492AA548EB00F0E92F /* Assets.xcassets in Resources */,
-				0116295B2AA558EF00F0E92F /* Localizable.xcstrings in Resources */,
+				0116295D2AA5627700F0E92F /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
